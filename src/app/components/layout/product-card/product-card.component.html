@@ -1,0 +1,17 @@
+<div class="product-card">
+    <div class="product-card__category" [ngClass]="getCategoryClass(product.category)">
+        <img [src]="'/assets/icons/category/' + getCategoryIcon(product.category)" alt="{{product.category}}" />
+    </div>  
+    <div class="product-card__info" (click)="updateProduct(product, {purchased: ! product.purchased} )">
+      <div class="product-card__info-title">{{product.name}}</div>
+      <div class="product-card__info-create">{{product.createdAt.toDate() | date: 'dd MMMM yyyy h:mm ' }}</div>
+    </div>
+    <div class="product-card__amount" >
+      <span class="amount-minus action-button" (click)="decreaseAmount(product)"></span>
+      <span class="action-button">{{product.amount}}</span>
+      <span class="amount-plus action-button" (click)="increaseAmount(product)"></span>
+    </div>
+    
+    <div class="product-card__delete action-button" (click)="deleteProduct(product.id)">
+    </div>
+  </div>

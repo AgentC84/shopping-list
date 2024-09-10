@@ -1,0 +1,23 @@
+<div class="login-page">
+
+  <div class="login-page__form">
+    @if(authMode==='Login') {
+     
+      <app-login-form></app-login-form>
+      
+      <div class="login-page__switch">
+        <span (click)="setAuthMode('Register')">Зарегистрироваться</span>
+      </div>
+    } @else {
+
+      <app-register-form></app-register-form>
+      
+
+      <div class="login-page__switch">
+        <span (click)="setAuthMode('Login')">Войти</span>
+      </div>
+    }
+  </div>
+ 
+  
+</div>

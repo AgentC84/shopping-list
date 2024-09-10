@@ -1,0 +1,29 @@
+
+  <form class="form" [formGroup]="formLogin" (ngSubmit)="onSubmitLogin()">
+    <h1 class="form__title">Вход</h1> 
+    
+    <div class="form__error"> 
+      @if (errorMessage) {
+        <span>
+          {{ errorMessage }}
+        </span>}
+    </div>
+
+    <label for="email">Почта</label>
+    <input 
+      class="form__input input" 
+      id="email" type="text" 
+      placeholder="Email" 
+      formControlName="email" />
+      
+    <label for="password">Пароль</label>
+    <input 
+      class="form__input input" 
+      id="password" type="password" 
+      placeholder="Password" 
+      formControlName="password" />
+    <button class="form__button button" type="submit">Войти</button>
+
+    
+  </form>
+

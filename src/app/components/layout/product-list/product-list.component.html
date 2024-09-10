@@ -1,0 +1,19 @@
+<h3>К покупке</h3>
+<div class="product-list">
+   
+    @for (product of products; track index; let index = $index) {
+    	@if (!product.purchased) {
+        	<app-product-card [product]="product"></app-product-card>
+      } 
+    }
+</div>
+
+<h3>Куплено</h3>
+<div class="purchased-list">    
+	@for (product of products; track index; let index = $index) {
+		@if (product.purchased) {
+		<app-product-card [product]="product"></app-product-card>
+		} 
+	}
+  </div>
+ 

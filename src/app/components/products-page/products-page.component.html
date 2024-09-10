@@ -1,0 +1,27 @@
+<div class="prepared-product main-section">
+    <h1 class="title"> {{title}}</h1>
+    <div class="prepared-product__form">
+        <div class="add-product">
+            <input class="add-product__input input " type="text" [(ngModel)]="newNameProduct" placeholder="Введите товар...">
+            <select class="add-product__category dropdown-list " name="category" id="category" [(ngModel)]="newCategory">
+                <option selected disabled> - Выберите категорию -</option>
+                @for(category of categories; track index; let index = $index) {
+                <option [value]="category.code">{{category.name}}</option>
+                }
+            </select>
+            <button class="button" (click)="addPreparedProduct(newNameProduct, newCategory)">Добавить</button>
+        </div>
+    </div>
+    
+    
+    <div class="prepared-product__list">
+        @for(product of preparedProducts; track index; let index = $index){
+            <div class="prepared-product__item">
+                <span class="prepared-product__item-name">{{product.name}}</span>
+                <span class="prepared-product__item-category">{{getCategoryName(product.category)}}</span>
+                <span class="delete" (click)="deletePreparedProduct(product.id)"></span>
+            </div>
+        }
+    </div>
+    
+</div>

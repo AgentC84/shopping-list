@@ -1,0 +1,62 @@
+
+:root {
+    --font-family-base: 'Montserrat', sans-serif;
+    --transition-duration: 0.2s;
+
+    --color-main: #ffffff;
+    --color-text: #1f1c2e;
+    --color-text-secondary: #9f9f9f;
+    --color-section: #f4f4f9;
+    --color-blocks: #ffffff;
+    --color-blocks-secondary:#ebebf1;
+
+    --color-accent: #6a6bfb;
+
+    --link-color:#1f1c2e;
+    --link-color-hover: #6a6bfb;
+    --link-color-active: #fff;
+    --link-color-active-bg: #1f1c2e;
+
+    --input-area-bg: #f3f6fd ;
+
+    --message-box-hover: #fafcff;
+    --message-box-border: #e9ebf0;
+
+    --color-chemicals: #a0a1fc;
+    --color-others: #6a6bfb;
+    --color-cereals: #efe84a;
+    --color-vegetables: #86e29b;
+    --color-fruits: #ff9f4a;
+    --color-drinks: #1e90ff;  
+    --color-meat: #fd345c; 
+    --color-sweet: #f98ac1; 
+    --color-bread: #fbd14b;
+    --color-milk: #a0e0fc;
+    // --color-10: #9b6ef3;
+    // --color-11: #48cfae;
+    // --color-12: #fc9ba0;
+    // --color-13: #f3a54b;
+    // --color-14: #72e2a0;
+    // --color-15: #ffcb4a;
+    
+  }
+  
+  .dark:root {
+    --color-main: #21242d;
+    --color-text: #e1e3e6;
+    --color-text-secondary:#747679;
+    --color-section: #141519;
+    --color-blocks:#21242d;
+    --color-blocks-secondary:#2b303d;
+
+    --link-color:rgba(255,255,255,.8);
+    --link-color-hover: rgba(195, 207, 244, 0.1);
+    --link-color-active: #fff;
+    --link-color-active-bg: rgba(195, 207, 244, 0.2);
+
+    --input-area-bg:  #111827;
+    --light-font: rgba(255,255,255,.8);
+
+    --message-box-hover: #243244;
+    --message-box-border: rgba(255,255,255,.1);
+  }

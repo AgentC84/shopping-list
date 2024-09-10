@@ -1,0 +1,149 @@
+@import '../../styles/media';
+
+.prepared-product {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    &__form {
+
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 20px;
+        background-color: var(--color-main);
+        padding: 10px;
+        border-radius: 12px;
+
+        &-name {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        &-category {
+            color: var(--color-text-secondary);
+        }
+    }
+}
+
+.delete {
+    width: 35px;
+    flex-shrink: 0;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: var(--color-section);
+    border-radius: 5px;
+    cursor: pointer;
+
+    @include mobile {
+        width: 25px;
+    }
+
+    &:hover {
+        &::before,
+        &::after{
+            background-color: var(--color-accent);
+        }
+        
+    }
+
+    &::before,
+    &::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 20px; /* Фиксированная ширина */
+    top: 50%;
+    background-color: var(--color-text-secondary);
+    border-radius: 5px;
+    
+    }
+    &::before {
+    rotate: 45deg;
+    }
+
+    &::after {
+    rotate: -45deg;
+    }
+    
+}
+
+.add-product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 30px;
+
+    @include mobile-s {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    &__input {
+        width: 100%;
+    }
+
+    &__category {
+        
+        // &:focus {
+        //     border-color: #0056b3; /* Цвет границы при фокусе */
+        //     outline: none; /* Убирает стандартную обводку браузера */
+        // }
+
+        // &::after {
+
+        // }
+        
+    }
+
+
+
+}
+
+// /* Стили для контейнера select */
+// .add-product_category {
+//     width: 100%; /* Занимает всю ширину контейнера */
+//     padding: 8px; /* Внутренний отступ */
+//     border: 2px solid #007bff; /* Граница */
+//     border-radius: 4px; /* Скругленные углы */
+//     background-color: #f8f9fa; /* Цвет фона */
+//     color: #333; /* Цвет текста */
+//     font-size: 16px; /* Размер шрифта */
+//     appearance: none; /* Убирает стандартный стиль браузера */
+//     -webkit-appearance: none; /* Для браузеров Webkit (Safari, Chrome) */
+//     -moz-appearance: none; /* Для браузеров Gecko (Firefox) */
+//     cursor: pointer; /* Курсор при наведении */
+//     transition: border-color 0.3s ease; /* Плавный переход цвета границы при фокусе */
+// }
+
+// /* Стили для текста по умолчанию (первый элемент) */
+// .add-product_category option[selected] {
+//     color: #888; /* Цвет серый для неактивного элемента */
+// }
+
+// /* Стили для фокуса на select */
+// .add-product_category:focus {
+//     border-color: #0056b3; /* Цвет границы при фокусе */
+//     outline: none; /* Убирает стандартную обводку браузера */
+// }
+
+// /* Стили для стрелки выпадающего списка */
+// .add-product_category::after {
+//     content: '\25BC'; /* Юникод символ стрелки вниз */
+//     position: absolute;
+//     right: 10px; /* Отступ справа */
+//     top: 50%; /* Центрируем по вертикали */
+//     transform: translateY(-50%); /* Корректируем центрирование */
+//     pointer-events: none; /* Чтобы элемент не реагировал на клики */
+// }

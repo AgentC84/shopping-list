@@ -1,0 +1,37 @@
+<div >
+  <form [formGroup]="addProductForm" (ngSubmit)="addProduct()" class="form-add-product">
+    <input
+      type="text"
+      formControlName="productName"
+      (input)="onSearch()"
+      placeholder="Введите название товара..."
+      class="form-add-product__input input"
+    />
+
+     <div *ngIf="isDropdownOpen"  class="form-add-product__dropdown-menu">
+      <ul class="dropdown-menu__list">
+        <li *ngFor="let product of filteredProducts" (click)="selectProduct(product)" class="dropdown-menu__item">
+          {{ product.name }}
+        </li>
+      </ul>
+    </div>
+
+    <div *ngIf="showAdditionalFields" class="form-add-product__fields">
+
+      <select  formControlName="category" class="fields__dropdown-list dropdown-list ">
+        <option value="" disabled selected> Выберите нужную категорию </option>
+        <option *ngFor="let category of categories" [value]="category.code">{{ category.name }}</option>
+      </select>
+        <label for="amount">Количество</label>
+        <input
+          id="amount" 
+          type="number" min="1" max="99"
+          formControlName="amount"
+          class="fields__input input"
+      />
+      
+    </div>
+
+    <button *ngIf="showAdditionalFields" type="submit" class="form-add-product__button button">Добавить</button>
+    </form>
+  </div>

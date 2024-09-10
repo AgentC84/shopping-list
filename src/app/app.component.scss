@@ -1,0 +1,19 @@
+@import './styles/media';
+
+.app {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: space-between; 
+    row-gap: 10px;
+  
+    &__main-section {
+      width: 100%;
+      flex-grow: 1;
+      padding: 12px;
+      @include tablet {
+        height: calc(100% - 60px);
+      }
+      
+    }
+  }

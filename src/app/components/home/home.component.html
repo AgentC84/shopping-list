@@ -1,0 +1,27 @@
+<div class="home section">
+  <div class="current-list">
+    <div class="current-list__header">
+      <h1 class="current-list__title title">{{title}}</h1>
+       <span class="current-list__link visible-tablet " onclick="tabletOverlay.showModal()">Все списки</span>
+    </div>
+    <app-form-product></app-form-product>
+    <div class="current-list__body">
+      <app-product-list [products]="products"></app-product-list>
+       
+    </div>
+  </div>
+  <div class="shopping-lists-container hidden-tablet">
+    <app-shopping-lists></app-shopping-lists>
+  </div>
+
+  <dialog class="tablet-overlay visible-tablet" id="tabletOverlay">
+    <form class="tablet-overlay__close-button-wrapper" method="dialog">
+      <button class="tablet-overlay__close-button cross-button" type="submit">
+      </button>
+    </form>
+    <div class="tablet-overlay__body">
+      <app-shopping-lists></app-shopping-lists>
+    </div>
+  </dialog>
+</div>
+
