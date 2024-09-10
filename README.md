@@ -9,10 +9,8 @@
 ![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)
 
 <div align="center">
-  <img height="300" width="600" src="./assets/preview-app.gif"  />
+  <img height="300" width="600" src="./Screenshot_app.png"  />
 </div>
-
-
 
 ## Запуск проекта:
 * Склонировать проект на ваш компьютер с Github с помощью команды:
